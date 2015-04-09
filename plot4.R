@@ -14,3 +14,6 @@ lines(power$DateTime, power$Sub_metering_2, type="l", col="red")
 lines(power$DateTime, power$Sub_metering_3, type="l", col="blue")
 legend("topright", c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col = c("black", "blue", "red"), lwd = 1, cex=.75, bty = "n")
 plot(power$DateTime, power$Global_reactive_power, xlab='datetime', ylab="Global_reactive_power", type="l", cex.axis = .75, cex.lab=.75, cex.main=1)
+
+dev.copy(png,"plot4.png", width=480, height=480)
+dev.off()
